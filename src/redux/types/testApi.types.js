@@ -1,0 +1,6 @@
+export const testApi = {
+    GET_REQUEST : "GET_REQUEST",
+    GET_SUCCESS : "GET_SUCCESS",
+    GET_FAILED : "GET_FAILED",
+    GET_LOADING : "GET_LOADING"
+}
