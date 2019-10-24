@@ -7,7 +7,7 @@ export class App extends Component {
     this.props.getRequest()
   }
   render() {
-    console.log('env',process.env);
+    console.log('data', this.props.data);
     return (
       <div>
         <h1>Dash</h1>
@@ -17,7 +17,7 @@ export class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  
+
 })
 
 const mapDispatchToProps = {

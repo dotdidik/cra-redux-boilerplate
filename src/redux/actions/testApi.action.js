@@ -11,18 +11,28 @@ export const getRequest = () => {
             .then(res => {
                 dispatch(getSuccess(res.data))
             })
+            .catch(err => {
+                dispatch(getError(err))
+            })
     }
 }
 
-export const getLoading = () => {
+const getLoading = () => {
     return {
         type: types.testApi.GET_LOADING
     }
 }
 
-export const getSuccess = (data) => {
+const getSuccess = (data) => {
     return {
         type: types.testApi.GET_SUCCESS,
+        payload: data
+    }
+}
+
+const getError = (data) => {
+    return {
+        type: types.testApi.GET_FAILED,
         payload: data
     }
 }
